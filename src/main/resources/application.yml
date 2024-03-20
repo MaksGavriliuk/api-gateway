@@ -13,3 +13,17 @@ spring:
     name: api-gateway
   main:
     web-application-type: reactive
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: academic-performance-service
+          uri: lb://academic-performance-service
+          predicates:
+            - Path=/academic-performance/**
+#        - id: students-service
+#          uri: lb://students
+#          predicates:
+#            - Path=/students/**
