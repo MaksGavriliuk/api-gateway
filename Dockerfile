@@ -9,7 +9,7 @@ RUN mvn clean package -DskipTests
 
 FROM openjdk:17-slim
 
-COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.war /app/
+COPY --from=build /app/target/api-gateway-0.0.1-SNAPSHOT.jar /app/
 WORKDIR /app
 
 CMD ["java", "-jar", "api-gateway-0.0.1-SNAPSHOT.jar"]
