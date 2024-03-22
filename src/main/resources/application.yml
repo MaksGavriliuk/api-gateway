@@ -23,3 +23,7 @@ spring:
           uri: lb://academic-performance-service
           predicates:
             - Path=/academic-performance/**
+        - id: faculties-service
+          uri: lb://faculties-service
+          predicates:
+            - Path=/faculties/**
