@@ -27,3 +27,7 @@ spring:
           uri: lb://faculties-service
           predicates:
             - Path=/faculties/**
+        - id: lectors-service
+          uri: lb://lectors-service
+          predicates:
+            - Path=/lectors/**
