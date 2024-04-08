@@ -31,3 +31,7 @@ spring:
           uri: lb://lectors-service
           predicates:
             - Path=/lectors/**
+        - id: students-service
+          uri: lb://students-service
+          predicates:
+            - Path=/students/**
